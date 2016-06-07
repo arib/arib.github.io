@@ -1,1 +1,70 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Minima - UXPin Preview</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="data/_img_favicon_90cb8314_ico">
+    <link rel="icon" type="image/png" href="data/_img_favicon_90cb8314_ico">
+    <link rel="icon" href="data/_img_ios_logo_180x180_4f260175.png">
+    <link rel="apple-touch-icon" href="data/_img_ios_logo_180x180_4f260175.png">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    
+
+    <link rel="stylesheet" href="data/styles_Preview_f2ac03ce.css">
+    
+
+    
+    
+</head>
+
+
+<body ng-controller="HomeController" class="loading" ng-class="{'loading' : isLoading, 'left-panel-active' : (isVisible && sidebarVisible), 'sitemap-visible' : (sitemapVisible && sidebarVisible), 'panel-visible' : (panelVisible && sidebarVisible), 'adding-comment' : isAddingComment, 'dragging' : dragging, 'no-toolbar' : noToolbar || isParticipant, 'crosshair-cursor' : showCrosshairCursor, 'sidebar-collapsed' : sidebarVisible === false}" ng-keydown="keyDown($event)">
+    
+
+    <div ui-view></div>
+    <div ng-class="{'fade-in' : panelFadeIn}" ui-view="comments"></div>
+    <div ng-class="{'fade-in' : sitemapFadeIn}" ui-view="sitemap"></div>
+    <div ui-view="nav"></div>
+    <div ui-view="canvas"></div>
+    <section id="responsive-toolbar" adjust-to-viewport-size>
+        <a class="only-icon-font icon-font-arrow show-main-toolbar" ng-click="showToolbar()" toggle-visibility toggle-flag="!isToolbarVisible()" toggle-width-open="34" toggle-width-closed="0" ng-if="!params.isDocument">
+            Show main toolbar
+            <span class="tooltip blue-style bottom-arrow">Show main toolbar</span>
+        </a>
+        <ul ui-view="breakpoints" ng-if="breakpointsVisible"></ul>
+        <ul ui-view="breadcrumbs" ng-if="breadcrumbsVisible" class="breadcrumbs"></ul>
+        <div ui-view="settings"></div>
+    </section>
+    <div ui-view="overlay"></div>
+    <div class="loader"></div>
+
+
+    <script type="text/javascript">
+    window.ApplicationConfiguration = {
+            project:{"id_project":5881834,"id_collection":1275455,"name":"Minima","hash":"7cc6abbc14e0aeabba0a55b635de6637e8089f59","type":"W","features":{"live_share":true,"user_testing":true,"password":true,"new_editor":false,"new_engine":true,"ignore_engine_version":false},"created_at":"2016-06-07T21:34:24+01:00","updated_at":"2016-06-07T21:33:58+01:00"},
+            userData:{"is_trial":false,"is_anonymous":true,"is_owner":false},
+            mode: 'export',
+            menuEnabled:true};
+    </script>
+
+    
+        <script type="text/javascript" src="data/scripts_engine_357f420e.js"></script>
+        <script type="text/javascript" src="data/scripts_vendors_83b108c8.js"></script>
+        <script type="text/javascript" src="data/scripts_app_549e6b6b.js"></script>
+        
+    
+
+</body>
+
+
+</html>
